@@ -163,7 +163,7 @@ $inputObject = @{
   TemplateParameterFile = "infra-as-code/bicep/modules/hubNetworking/parameters/hubNetworking.parameters.all.json"
 }
 
-New-AzResourceGroup -Name $ResourceGroupName `
+New-AzResourceGroup -Name $inputObject.ResourceGroupName `
   -Location 'eastus'
 
 New-AzResourceGroupDeployment @inputObject
@@ -187,7 +187,7 @@ $inputObject = @{
   TemplateParameterFile = "infra-as-code/bicep/modules/hubNetworking/parameters/mc-hubNetworking.parameters.all.json"
 }
 
-New-AzResourceGroup -Name $ResourceGroupName `
+New-AzResourceGroup -Name $inputObject.ResourceGroupName `
   -Location 'chinaeast2'
 
 New-AzResourceGroupDeployment @inputObject

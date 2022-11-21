@@ -131,7 +131,7 @@ Select-AzSubscription -SubscriptionId $ConnectivitySubscriptionId
 # Set the top level MG Prefix in accordance to your environment. This example assumes default 'alz'.
 $TopLevelMGPrefix = "alz"
 
-New-AzResourceGroup -Name $ResourceGroupName `
+New-AzResourceGroup -Name $inputObject.ResourceGroupName `
   -Location 'eastus'
 
 $inputObject = @{
@@ -155,7 +155,7 @@ Select-AzSubscription -SubscriptionId $ConnectivitySubscriptionId
 # Set the top level MG Prefix in accordance to your environment. This example assumes default 'alz'.
 $TopLevelMGPrefix = "alz"
 
-New-AzResourceGroup -Name $ResourceGroupName `
+New-AzResourceGroup -Name $inputObject.ResourceGroupName `
   -Location 'chinaeast2'
 
 $inputObject = @{
