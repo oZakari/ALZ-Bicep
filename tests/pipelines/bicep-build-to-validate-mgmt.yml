@@ -26,6 +26,7 @@ jobs:
         inputs:
           targetType: "inline"
           script: |
+            git fetch origin main:refs/remotes/origin/main
             git_diff1=$(git diff --name-only main HEAD infra-as-code/bicep/modules/managementGroups/managementGroups.bicep)
             git_diff2=$(git diff --name-only main HEAD infra-as-code/bicep/modules/customRoleDefinitions/customRoleDefinitions.bicep)
             git_diff3=$(git diff --name-only main HEAD infra-as-code/bicep/modules/policy/definitions/customPolicyDefinitions.bicep)
