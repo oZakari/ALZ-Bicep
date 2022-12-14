@@ -1,5 +1,7 @@
 //Testing
 
+//test
+
 targetScope = 'managementGroup'
 
 metadata name = 'ALZ Bicep - Management Group Policy Assignments'
