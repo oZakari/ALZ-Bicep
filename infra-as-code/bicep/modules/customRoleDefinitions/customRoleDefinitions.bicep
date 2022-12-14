@@ -1,7 +1,7 @@
 targetScope = 'managementGroup'
 
 metadata name = 'ALZ Bicep - Custom Role Definitions'
-metadata description ='Custom Role Definitions for ALZ Bicep'
+metadata description = 'Custom Role Definitions for ALZ Bicep'
 
 @sys.description('The management group scope to which the role can be assigned. This management group ID will be used for the assignableScopes property in the role definition. Default: alz')
 param parAssignableScopeManagementGroupId string = 'alz'
@@ -51,3 +51,5 @@ output outRolesSubscriptionOwnerRoleId string = modRolesSubscriptionOwnerRole.ou
 output outRolesApplicationOwnerRoleId string = modRolesApplicationOwnerRole.outputs.outRoleDefinitionId
 output outRolesNetworkManagementRoleId string = modRolesNetworkManagementRole.outputs.outRoleDefinitionId
 output outRolesSecurityOperationsRoleId string = modRolesSecurityOperationsRole.outputs.outRoleDefinitionId
+
+//test
