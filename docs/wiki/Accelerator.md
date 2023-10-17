@@ -264,3 +264,27 @@ We recommend that you do not modify the ALZ Bicep modules directly within the up
     ```
 
 1. You are now ready to commit your changes to the main branch and trigger a new deployment.
+
+### Policy Management
+
+From an Azure Policy/Policy Set Definition deployment perspective, this framework references the [Azure Landing Zones conceptual architecture and reference implementation](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/). For additional information around how the the Custom Policy Definition's module deploys this referenced implementation, see the [module's documentation](https://github.com/Azure/ALZ-Bicep/blob/main/infra-as-code/bicep/modules/policy/definitions/README.md#module-custom-policy-definitions).
+
+In terms of the Azure Policy Assignments associated the Custom Policy Definition's module, the framework takes advantage of the [ALZ Default Policy Assignments module](https://github.com/Azure/ALZ-Bicep/blob/main/infra-as-code/bicep/modules/policy/assignments/alzDefaults/README.md).It is important that you understand the assignments associated to this module as they can impact deployment of resources within other ALZ Bicep modules.
+
+#### Excluding Policy Assignments
+
+If specific ALZ default policies do not fit your organizational requirements, you can exclude policies from the ALZ Default Policy Assignments module. In the following example, our organization would like to deploy virtual networks without requiring them to be linked to a DDoS Protection Plan. Therefore, we will exclude the Enable-DDoS-VNET policy from the ALZ Default Policy Assignments module.
+
+1. Navigate to the Policy Assignments lib directory for whichever release you are currently using: `upstream-releases\v0.16.5\infra-as-code\bicep\modules\policy\assignments\lib\policy_assignments`
+
+1. Open the .json file for the policy you want to exclude and find/copy the name property. In our example, the json file name is `policy_assignment_es_enable_ddos_vnet.tmpl.json` and the name property of that file is `"name": "Enable-DDoS-VNET"`
+
+1. Add the name property to the `excludedPolicyAssignments` array in the `config\custom-parameters\alzDefaultPolicyAssignments.parameters.all.json` file as shown below:
+
+    ```json
+    "parExcludedPolicyAssignments" : {
+      "value": [
+        "Enable-DDoS-VNET"
+      ]
+    }
+    ```
