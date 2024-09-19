@@ -69,20 +69,6 @@
       }
     }
   },
-  "BotServiceDenyPublicIP": {
-    "parameters": {
-      "effect": {
-        "value": "[[parameters('BotServicePublicIpDenyEffect')]"
-      }
-    }
-  },
-  "ContainerAppsEnvironmentDenyPublicIP": {
-    "parameters": {
-      "effect": {
-        "value": "[[parameters('ContainerAppsEnvironmentDenyEffect')]"
-      }
-    }
-  },
   "CosmosDenyPaasPublicIP": {
     "parameters": {
       "effect": {
@@ -132,13 +118,6 @@
       }
     }
   },
-  "Deny-ContainerApps-Public-Network-Access": {
-    "parameters": {
-      "effect": {
-        "value": "[[parameters('containerAppsPublicNetworkAccess')]"
-      }
-    }
-  },
   "Deny-EH-Public-Network-Access": {
     "parameters": {
       "effect": {
@@ -160,24 +139,10 @@
       }
     }
   },
-  "Deny-Grafana-PublicNetworkAccess": {
-    "parameters": {
-      "effect": {
-        "value": "[[parameters('grafanaPublicNetworkAccess')]"
-      }
-    }
-  },
   "Deny-Hostpool-PublicNetworkAccess": {
     "parameters": {
       "effect": {
         "value": "[[parameters('avdHostPoolPublicNetworkAccess')]"
-      }
-    }
-  },
-  "Deny-KV-Hms-PublicNetwork": {
-    "parameters": {
-      "effect": {
-        "value": "[[parameters('keyVaultManagedHsmDisablePublicNetwork')]"
       }
     }
   },
@@ -192,13 +157,6 @@
     "parameters": {
       "effect": {
         "value": "[[parameters('managedDiskPublicNetworkAccess')]"
-      }
-    }
-  },
-  "Deny-MySql-Public-Network-Access": {
-    "parameters": {
-      "effect": {
-        "value": "[[parameters('mySqlPublicNetworkAccess')]"
       }
     }
   },
@@ -220,13 +178,6 @@
     "parameters": {
       "effect": {
         "value": "[[parameters('sqlManagedPublicNetworkAccess')]"
-      }
-    }
-  },
-  "Deny-Storage-Public-Access": {
-    "parameters": {
-      "effect": {
-        "value": "[[parameters('storageAccountsPublicAccess')]"
       }
     }
   },
@@ -265,24 +216,10 @@
       }
     }
   },
-  "MariaDbDenyPublicIP": {
-    "parameters": {
-      "effect": {
-        "value": "[[parameters('MariaDbPublicIpDenyEffect')]"
-      }
-    }
-  },
   "MlDenyPublicIP": {
     "parameters": {
       "effect": {
         "value": "[[parameters('MlPublicIpDenyEffect')]"
-      }
-    }
-  },
-  "MySQLFlexDenyPublicIP": {
-    "parameters": {
-      "effect": {
-        "value": "[[parameters('MySQLFlexPublicIpDenyEffect')]"
       }
     }
   },

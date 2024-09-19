@@ -30,13 +30,6 @@
       }
     }
   },
-  "ContainerAppsHttpsOnlyEffect": {
-    "parameters": {
-      "effect": {
-        "value": "[[parameters('ContainerAppsHttpsOnlyEffect')]"
-      }
-    }
-  },
   "Deny-AppService-Apps-Https": {
     "parameters": {
       "effect": {
@@ -55,13 +48,6 @@
     "parameters": {
       "effect": {
         "value": "[[parameters('appServiceTls')]"
-      }
-    }
-  },
-  "Deny-ContainerApps-Https": {
-    "parameters": {
-      "effect": {
-        "value": "[[parameters('containerAppsHttps')]"
       }
     }
   },

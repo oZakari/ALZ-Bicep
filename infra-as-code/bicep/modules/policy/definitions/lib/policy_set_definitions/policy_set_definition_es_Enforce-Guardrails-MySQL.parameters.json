@@ -1,11 +1,4 @@
 {
-  "Deny-MySql-Infra-Encryption": {
-    "parameters": {
-      "effect": {
-        "value": "[[parameters('mySqlInfraEncryption')]"
-      }
-    }
-  },
   "Dine-MySql-Adv-Threat-Protection": {
     "parameters": {
       "effect": {

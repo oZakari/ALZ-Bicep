@@ -18,15 +18,6 @@
       ]
     },
     "parameters": {
-      "mySqlInfraEncryption": {
-        "type": "string",
-        "defaultValue": "Deny",
-        "allowedValues": [
-          "Audit",
-          "Deny",
-          "Disabled"
-        ]
-      },
       "mySqlAdvThreatProtection": {
         "type": "string",
         "defaultValue": "DeployIfNotExists",
@@ -43,16 +34,6 @@
         "parameters": {
           "effect": {
             "value": "[[parameters('mySqlAdvThreatProtection')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
-        "policyDefinitionReferenceId": "Deny-MySql-Infra-Encryption",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3a58212a-c829-4f13-9872-6371df2fd0b4",
-        "parameters": {
-          "effect": {
-            "value": "[[parameters('mySqlInfraEncryption')]"
           }
         },
         "groupNames": []

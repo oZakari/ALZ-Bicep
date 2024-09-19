@@ -18,14 +18,6 @@
       ]
     },
     "parameters": {
-      "keyVaultManagedHsmDisablePublicNetworkModify": {
-        "type": "string",
-        "defaultValue": "Modify",
-        "allowedValues": [
-          "Modify",
-          "Disabled"
-        ]
-      },
       "keyVaultModifyFw": {
         "type": "string",
         "defaultValue": "Modify",
@@ -36,16 +28,6 @@
       }
     },
     "policyDefinitions": [
-      {
-        "policyDefinitionReferenceId": "Modify-KV-PublicNetworkAccess",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/84d327c3-164a-4685-b453-900478614456",
-        "parameters": {
-          "effect": {
-            "value": "[[parameters('keyVaultManagedHsmDisablePublicNetworkModify')]"
-          }
-        },
-        "groupNames": []
-      },
       {
         "policyDefinitionReferenceId": "Modify-KV-Fw",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ac673a9a-f77d-4846-b2d8-a57f8e1c01dc",

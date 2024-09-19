@@ -13,34 +13,6 @@
       }
     }
   },
-  "Deny-FW-AllIDPSS": {
-    "parameters": {
-      "effect": {
-        "value": "[[parameters('afwEnableAllIDPSSignatureRules')]"
-      }
-    }
-  },
-  "Deny-FW-EmpIDPSBypass": {
-    "parameters": {
-      "effect": {
-        "value": "[[parameters('afwEmptyIDPSBypassList')]"
-      }
-    }
-  },
-  "Deny-FW-TLS-AllApp": {
-    "parameters": {
-      "effect": {
-        "value": "[[parameters('afwEnbaleTlsForAllAppRules')]"
-      }
-    }
-  },
-  "Deny-FW-TLS-Inspection": {
-    "parameters": {
-      "effect": {
-        "value": "[[parameters('afwEnableTlsInspection')]"
-      }
-    }
-  },
   "Deny-Ip-Forwarding": {
     "parameters": {}
   },
@@ -102,20 +74,6 @@
       },
       "modeRequirement": {
         "value": "[[parameters('wafModeAppGwRequirement')]"
-      }
-    }
-  },
-  "Deny-Waf-Fw-rules": {
-    "parameters": {
-      "effect": {
-        "value": "[[parameters('wafFwRules')]"
-      }
-    }
-  },
-  "Deny-Waf-IDPS": {
-    "parameters": {
-      "effect": {
-        "value": "[[parameters('afwEnableIDPS')]"
       }
     }
   },

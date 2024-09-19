@@ -133,37 +133,11 @@
         ],
         "defaultValue": "Deny"
       },
-      "MySQLFlexPublicIpDenyEffect": {
-        "type": "String",
-        "metadata": {
-          "displayName": "Public network access should be disabled for MySQL Flexible Server",
-          "description": "This policy denies creation of MySql Flexible Server DB accounts with exposed public endpoints"
-        },
-        "allowedValues": [
-          "Audit",
-          "Deny",
-          "Disabled"
-        ],
-        "defaultValue": "Deny"
-      },
       "BatchPublicIpDenyEffect": {
         "type": "String",
         "metadata": {
           "displayName": "Public network access should be disabled for Azure Batch Instances",
           "description": "This policy denies creation of Azure Batch Instances with exposed public endpoints"
-        },
-        "allowedValues": [
-          "Audit",
-          "Deny",
-          "Disabled"
-        ],
-        "defaultValue": "Deny"
-      },
-      "MariaDbPublicIpDenyEffect": {
-        "type": "String",
-        "metadata": {
-          "displayName": "Public network access should be disabled for Azure MariaDB",
-          "description": "This policy denies creation of Azure MariaDB with exposed public endpoints"
         },
         "allowedValues": [
           "Audit",
@@ -190,19 +164,6 @@
         "metadata": {
           "displayName": "Public network access should be disabled for Azure Cache for Redis",
           "description": "This policy denies creation of Azure Cache for Redis with exposed public endpoints"
-        },
-        "allowedValues": [
-          "Audit",
-          "Deny",
-          "Disabled"
-        ],
-        "defaultValue": "Deny"
-      },
-      "BotServicePublicIpDenyEffect": {
-        "type": "String",
-        "metadata": {
-          "displayName": "Public network access should be disabled for Bot Service",
-          "description": "This policy denies creation of Bot Service with exposed public endpoints. Bots should be set to 'isolated only' mode"
         },
         "allowedValues": [
           "Audit",
@@ -301,19 +262,6 @@
         ],
         "defaultValue": "AuditIfNotExists"
       },
-      "ContainerAppsEnvironmentDenyEffect": {
-        "type": "String",
-        "metadata": {
-          "displayName": "Container Apps environment should disable public network access",
-          "description": "This policy denies creation of Container Apps Environment with exposed public endpoints"
-        },
-        "allowedValues": [
-          "Audit",
-          "Deny",
-          "Disabled"
-        ],
-        "defaultValue": "Deny"
-      },
       "AsrVaultDenyEffect": {
         "type": "String",
         "metadata": {
@@ -362,15 +310,6 @@
           "Disabled"
         ]
       },
-      "containerAppsPublicNetworkAccess": {
-        "type": "string",
-        "defaultValue": "Deny",
-        "allowedValues": [
-          "Audit",
-          "Deny",
-          "Disabled"
-        ]
-      },
       "adxPublicNetworkAccess": {
         "type": "string",
         "defaultValue": "Deny",
@@ -416,24 +355,6 @@
           "Disabled"
         ]
       },
-      "keyVaultManagedHsmDisablePublicNetwork": {
-        "type": "string",
-        "defaultValue": "Deny",
-        "allowedValues": [
-          "Audit",
-          "Deny",
-          "Disabled"
-        ]
-      },
-      "mySqlPublicNetworkAccess": {
-        "type": "string",
-        "defaultValue": "Deny",
-        "allowedValues": [
-          "Audit",
-          "Deny",
-          "Disabled"
-        ]
-      },
       "cognitiveServicesNetworkAccess": {
         "type": "string",
         "defaultValue": "Deny",
@@ -470,15 +391,6 @@
           "Disabled"
         ]
       },
-      "storageAccountsPublicAccess": {
-        "type": "string",
-        "defaultValue": "Deny",
-        "allowedValues": [
-          "Audit",
-          "Deny",
-          "Disabled"
-        ]
-      },
       "synapsePublicNetworkAccess": {
         "type": "string",
         "defaultValue": "Deny",
@@ -498,15 +410,6 @@
         ]
       },
       "avdWorkspacePublicNetworkAccess": {
-        "type": "string",
-        "defaultValue": "Deny",
-        "allowedValues": [
-          "Audit",
-          "Deny",
-          "Disabled"
-        ]
-      },
-      "grafanaPublicNetworkAccess": {
         "type": "string",
         "defaultValue": "Deny",
         "allowedValues": [
@@ -608,31 +511,11 @@
         "groupNames": []
       },
       {
-        "policyDefinitionReferenceId": "MySQLFlexDenyPublicIP",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c9299215-ae47-4f50-9c54-8a392f68a052",
-        "parameters": {
-          "effect": {
-            "value": "[[parameters('MySQLFlexPublicIpDenyEffect')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
         "policyDefinitionReferenceId": "BatchDenyPublicIP",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/74c5a0ae-5e48-4738-b093-65e23a060488",
         "parameters": {
           "effect": {
             "value": "[[parameters('BatchPublicIpDenyEffect')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
-        "policyDefinitionReferenceId": "MariaDbDenyPublicIP",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/fdccbe47-f3e3-4213-ad5d-ea459b2fa077",
-        "parameters": {
-          "effect": {
-            "value": "[[parameters('MariaDbPublicIpDenyEffect')]"
           }
         },
         "groupNames": []
@@ -653,16 +536,6 @@
         "parameters": {
           "effect": {
             "value": "[[parameters('RedisCachePublicIpDenyEffect')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
-        "policyDefinitionReferenceId": "BotServiceDenyPublicIP",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5e8168db-69e3-4beb-9822-57cb59202a9d",
-        "parameters": {
-          "effect": {
-            "value": "[[parameters('BotServicePublicIpDenyEffect')]"
           }
         },
         "groupNames": []
@@ -733,26 +606,6 @@
         "parameters": {
           "effect": {
             "value": "[[parameters('ApiManPublicIpDenyEffect')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
-        "policyDefinitionReferenceId": "ContainerAppsEnvironmentDenyPublicIP",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d074ddf8-01a5-4b5e-a2b8-964aed452c0a",
-        "parameters": {
-          "effect": {
-            "value": "[[parameters('ContainerAppsEnvironmentDenyEffect')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
-        "policyDefinitionReferenceId": "Deny-ContainerApps-Public-Network-Access",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/783ea2a8-b8fd-46be-896a-9ae79643a0b1",
-        "parameters": {
-          "effect": {
-            "value": "[[parameters('containerAppsPublicNetworkAccess')]"
           }
         },
         "groupNames": []
@@ -858,26 +711,6 @@
         "groupNames": []
       },
       {
-        "policyDefinitionReferenceId": "Deny-KV-Hms-PublicNetwork",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/19ea9d63-adee-4431-a95e-1913c6c1c75f",
-        "parameters": {
-          "effect": {
-            "value": "[[parameters('keyVaultManagedHsmDisablePublicNetwork')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
-        "policyDefinitionReferenceId": "Deny-MySql-Public-Network-Access",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d9844e8a-1437-4aeb-a32c-0c992f056095",
-        "parameters": {
-          "effect": {
-            "value": "[[parameters('mySqlPublicNetworkAccess')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
         "policyDefinitionReferenceId": "Deny-Cognitive-Services-Public-Network-Access",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0725b4dd-7e76-479c-a735-68e7ee23d5ca",
         "parameters": {
@@ -918,16 +751,6 @@
         "groupNames": []
       },
       {
-        "policyDefinitionReferenceId": "Deny-Storage-Public-Access",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4fa4b6c0-31ca-4c0d-b10d-24b96f62a751",
-        "parameters": {
-          "effect": {
-            "value": "[[parameters('storageAccountsPublicAccess')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
         "policyDefinitionReferenceId": "Deny-Synapse-Public-Network-Access",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/38d8df46-cf4e-4073-8e03-48c24b29de0d",
         "parameters": {
@@ -953,16 +776,6 @@
         "parameters": {
           "effect": {
             "value": "[[parameters('avdHostPoolPublicNetworkAccess')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
-        "policyDefinitionReferenceId": "Deny-Grafana-PublicNetworkAccess",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e8775d5a-73b7-4977-a39b-833ef0114628",
-        "parameters": {
-          "effect": {
-            "value": "[[parameters('grafanaPublicNetworkAccess')]"
           }
         },
         "groupNames": []

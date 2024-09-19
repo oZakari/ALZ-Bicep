@@ -313,15 +313,6 @@
           "description": "Private DNS Zone Identifier"
         }
       },
-      "azureWebPrivateDnsZoneId": {
-        "type": "string",
-        "defaultValue": "",
-        "metadata": {
-          "displayName": "azureWebPrivateDnsZoneId",
-          "strongType": "Microsoft.Network/privateDnsZones",
-          "description": "Private DNS Zone Identifier"
-        }
-      },
       "azureBatchPrivateDnsZoneId": {
         "type": "string",
         "defaultValue": "",
@@ -493,24 +484,6 @@
           "description": "Private DNS Zone Identifier"
         }
       },
-      "azureBotServicePrivateDnsZoneId": {
-        "type": "string",
-        "defaultValue": "",
-        "metadata": {
-          "displayName": "azureBotServicePrivateDnsZoneId",
-          "strongType": "Microsoft.Network/privateDnsZones",
-          "description": "Private DNS Zone Identifier"
-        }
-      },
-      "azureManagedGrafanaWorkspacePrivateDnsZoneId": {
-        "type": "string",
-        "defaultValue": "",
-        "metadata": {
-          "displayName": "azureManagedGrafanaWorkspacePrivateDnsZoneId",
-          "strongType": "Microsoft.Network/privateDnsZones",
-          "description": "Private DNS Zone Identifier"
-        }
-      },
       "azureVirtualDesktopHostpoolPrivateDnsZoneId": {
         "type": "string",
         "defaultValue": "",
@@ -525,51 +498,6 @@
         "defaultValue": "",
         "metadata": {
           "displayName": "azureVirtualDesktopWorkspacePrivateDnsZoneId",
-          "strongType": "Microsoft.Network/privateDnsZones",
-          "description": "Private DNS Zone Identifier"
-        }
-      },
-      "azureIotDeviceupdatePrivateDnsZoneId": {
-        "type": "string",
-        "defaultValue": "",
-        "metadata": {
-          "displayName": "azureIotDeviceupdatePrivateDnsZoneId",
-          "strongType": "Microsoft.Network/privateDnsZones",
-          "description": "Private DNS Zone Identifier"
-        }
-      },
-      "azureArcGuestconfigurationPrivateDnsZoneId": {
-        "type": "string",
-        "defaultValue": "",
-        "metadata": {
-          "displayName": "azureArcGuestconfigurationPrivateDnsZoneId",
-          "strongType": "Microsoft.Network/privateDnsZones",
-          "description": "Private DNS Zone Identifier"
-        }
-      },
-      "azureArcHybridResourceProviderPrivateDnsZoneId": {
-        "type": "string",
-        "defaultValue": "",
-        "metadata": {
-          "displayName": "azureArcHybridResourceProviderPrivateDnsZoneId",
-          "strongType": "Microsoft.Network/privateDnsZones",
-          "description": "Private DNS Zone Identifier"
-        }
-      },
-      "azureArcKubernetesConfigurationPrivateDnsZoneId": {
-        "type": "string",
-        "defaultValue": "",
-        "metadata": {
-          "displayName": "azureArcKubernetesConfigurationPrivateDnsZoneId",
-          "strongType": "Microsoft.Network/privateDnsZones",
-          "description": "Private DNS Zone Identifier"
-        }
-      },
-      "azureIotCentralPrivateDnsZoneId": {
-        "type": "string",
-        "defaultValue": "",
-        "metadata": {
-          "displayName": "azureIotCentralPrivateDnsZoneId",
           "strongType": "Microsoft.Network/privateDnsZones",
           "description": "Private DNS Zone Identifier"
         }
@@ -1106,19 +1034,6 @@
         "groupNames": []
       },
       {
-        "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-Web",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0b026355-49cb-467b-8ac4-f777874e175a",
-        "parameters": {
-          "privateDnsZoneId": {
-            "value": "[[parameters('azureWebPrivateDnsZoneId')]"
-          },
-          "effect": {
-            "value": "[[parameters('effect')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
         "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-Batch",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4ec38ebc-381f-45ee-81a4-acbc4be878f8",
         "parameters": {
@@ -1356,32 +1271,6 @@
         "groupNames": []
       },
       {
-        "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-BotService",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6a4e6f44-f2af-4082-9702-033c9e88b9f8",
-        "parameters": {
-          "privateDnsZoneId": {
-            "value": "[[parameters('azureBotServicePrivateDnsZoneId')]"
-          },
-          "effect": {
-            "value": "[[parameters('effect')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
-        "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-ManagedGrafanaWorkspace",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4c8537f8-cd1b-49ec-b704-18e82a42fd58",
-        "parameters": {
-          "privateDnsZoneId": {
-            "value": "[[parameters('azureManagedGrafanaWorkspacePrivateDnsZoneId')]"
-          },
-          "effect": {
-            "value": "[[parameters('effect')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
         "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-VirtualDesktopHostpool",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9427df23-0f42-4e1e-bf99-a6133d841c4a",
         "parameters": {
@@ -1406,51 +1295,6 @@
           },
           "privateEndpointGroupId": {
             "value": "feed"
-          },
-          "effect": {
-            "value": "[[parameters('effect')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
-        "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-IoTDeviceupdate",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a222b93a-e6c2-4c01-817f-21e092455b2a",
-        "parameters": {
-          "privateDnsZoneId": {
-            "value": "[[parameters('azureIotDeviceupdatePrivateDnsZoneId')]"
-          },
-          "effect": {
-            "value": "[[parameters('effect')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
-        "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-Arc",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/55c4db33-97b0-437b-8469-c4f4498f5df9",
-        "parameters": {
-          "privateDnsZoneIdForGuestConfiguration": {
-            "value": "[[parameters('azureArcGuestconfigurationPrivateDnsZoneId')]"
-          },
-          "privateDnsZoneIdForHybridResourceProvider": {
-            "value": "[[parameters('azureArcHybridResourceProviderPrivateDnsZoneId')]"
-          },
-          "privateDnsZoneIdForKubernetesConfiguration": {
-            "value": "[[parameters('azureArcKubernetesConfigurationPrivateDnsZoneId')]"
-          },
-          "effect": {
-            "value": "[[parameters('effect')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
-        "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-IoTCentral",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d627d7c6-ded5-481a-8f2e-7e16b1e6faf6",
-        "parameters": {
-          "privateDnsZoneId": {
-            "value": "[[parameters('azureIotCentralPrivateDnsZoneId')]"
           },
           "effect": {
             "value": "[[parameters('effect')]"

@@ -218,19 +218,6 @@
         "groupNames": []
       },
       {
-        "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-Web",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0b026355-49cb-467b-8ac4-f777874e175a",
-        "parameters": {
-          "privateDnsZoneId": {
-            "value": "[[parameters('azureWebPrivateDnsZoneId')]"
-          },
-          "effect": {
-            "value": "[[parameters('effect')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
         "policyDefinitionReferenceId": "DINE-Private-DNS-Azure-Batch",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4ec38ebc-381f-45ee-81a4-acbc4be878f8",
         "parameters": {

@@ -75,15 +75,6 @@
         "type": "string",
         "defaultValue": "Prevention"
       },
-      "wafFwRules": {
-        "type": "string",
-        "defaultValue": "Deny",
-        "allowedValues": [
-          "Audit",
-          "Deny",
-          "Disabled"
-        ]
-      },
       "wafModeAppGw": {
         "type": "string",
         "defaultValue": "Deny",
@@ -115,51 +106,6 @@
         "defaultValue": [
           "22",
           "3389"
-        ]
-      },
-      "afwEnbaleTlsForAllAppRules": {
-        "type": "string",
-        "defaultValue": "Deny",
-        "allowedValues": [
-          "Audit",
-          "Deny",
-          "Disabled"
-        ]
-      },
-      "afwEnableTlsInspection": {
-        "type": "string",
-        "defaultValue": "Deny",
-        "allowedValues": [
-          "Audit",
-          "Deny",
-          "Disabled"
-        ]
-      },
-      "afwEmptyIDPSBypassList": {
-        "type": "string",
-        "defaultValue": "Deny",
-        "allowedValues": [
-          "Audit",
-          "Deny",
-          "Disabled"
-        ]
-      },
-      "afwEnableAllIDPSSignatureRules": {
-        "type": "string",
-        "defaultValue": "Deny",
-        "allowedValues": [
-          "Audit",
-          "Deny",
-          "Disabled"
-        ]
-      },
-      "afwEnableIDPS": {
-        "type": "string",
-        "defaultValue": "Deny",
-        "allowedValues": [
-          "Audit",
-          "Deny",
-          "Disabled"
         ]
       },
       "wafAfdEnabled": {
@@ -287,56 +233,6 @@
         "groupNames": []
       },
       {
-        "policyDefinitionReferenceId": "Deny-Waf-IDPS",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6484db87-a62d-4327-9f07-80a2cbdf333a",
-        "parameters": {
-          "effect": {
-            "value": "[[parameters('afwEnableIDPS')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
-        "policyDefinitionReferenceId": "Deny-FW-AllIDPSS",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/610b6183-5f00-4d68-86d2-4ab4cb3a67a5",
-        "parameters": {
-          "effect": {
-            "value": "[[parameters('afwEnableAllIDPSSignatureRules')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
-        "policyDefinitionReferenceId": "Deny-FW-EmpIDPSBypass",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f516dc7a-4543-4d40-aad6-98f76a706b50",
-        "parameters": {
-          "effect": {
-            "value": "[[parameters('afwEmptyIDPSBypassList')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
-        "policyDefinitionReferenceId": "Deny-FW-TLS-Inspection",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/711c24bb-7f18-4578-b192-81a6161e1f17",
-        "parameters": {
-          "effect": {
-            "value": "[[parameters('afwEnableTlsInspection')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
-        "policyDefinitionReferenceId": "Deny-FW-TLS-AllApp",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a58ac66d-92cb-409c-94b8-8e48d7a96596",
-        "parameters": {
-          "effect": {
-            "value": "[[parameters('afwEnbaleTlsForAllAppRules')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
         "policyDefinitionReferenceId": "Deny-Waf-AppGw-mode",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/12430be1-6cc8-4527-a9a8-e3d38f250096",
         "parameters": {
@@ -345,16 +241,6 @@
           },
           "modeRequirement": {
             "value": "[[parameters('wafModeAppGwRequirement')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
-        "policyDefinitionReferenceId": "Deny-Waf-Fw-rules",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/632d3993-e2c0-44ea-a7db-2eca131f356d",
-        "parameters": {
-          "effect": {
-            "value": "[[parameters('wafFwRules')]"
           }
         },
         "groupNames": []

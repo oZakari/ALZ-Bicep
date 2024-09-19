@@ -45,14 +45,6 @@
           "Disabled"
         ]
       },
-      "storageThreatProtection": {
-        "type": "string",
-        "defaultValue": "DeployIfNotExists",
-        "allowedValues": [
-          "DeployIfNotExists",
-          "Disabled"
-        ]
-      },
       "storageClassicToArm": {
         "type": "string",
         "defaultValue": "Deny",
@@ -383,16 +375,6 @@
         "parameters": {
           "effect": {
             "value": "[[parameters('storageClassicToArm')]"
-          }
-        },
-        "groupNames": []
-      },
-      {
-        "policyDefinitionReferenceId": "Dine-Storage-Threat-Protection",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/361c2074-3595-4e5d-8cab-4f21dffc835c",
-        "parameters": {
-          "effect": {
-            "value": "[[parameters('storageThreatProtection')]"
           }
         },
         "groupNames": []

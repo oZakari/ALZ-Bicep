@@ -22,37 +22,13 @@
       "enableAscForServers": {
         "value": "DeployIfNotExists"
       },
-      "enableAscForServersVulnerabilityAssessments": {
-        "value": "DeployIfNotExists"
-      },
       "enableAscForSql": {
-        "value": "DeployIfNotExists"
-      },
-      "enableAscForAppServices": {
-        "value": "DeployIfNotExists"
-      },
-      "enableAscForStorage": {
         "value": "DeployIfNotExists"
       },
       "enableAscForContainers": {
         "value": "DeployIfNotExists"
       },
-      "enableAscForKeyVault": {
-        "value": "DeployIfNotExists"
-      },
-      "enableAscForSqlOnVm": {
-        "value": "DeployIfNotExists"
-      },
       "enableAscForArm": {
-        "value": "DeployIfNotExists"
-      },
-      "enableAscForOssDb": {
-        "value": "DeployIfNotExists"
-      },
-      "enableAscForCosmosDbs": {
-        "value": "DeployIfNotExists"
-      },
-      "enableAscForCspm": {
         "value": "DeployIfNotExists"
       }
     },

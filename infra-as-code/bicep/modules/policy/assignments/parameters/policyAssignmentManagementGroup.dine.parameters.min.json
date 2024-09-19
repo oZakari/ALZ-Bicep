@@ -34,29 +34,14 @@
                 "enableAscForSql": {
                     "value": "Disabled"
                 },
-                "enableAscForAppServices": {
-                    "value": "DeployIfNotExists"
-                },
-                "enableAscForStorage": {
-                    "value": "DeployIfNotExists"
-                },
                 "enableAscForContainers": {
                     "value": "DeployIfNotExists"
-                },
-                "enableAscForKeyVault": {
-                    "value": "DeployIfNotExists"
-                },
-                "enableAscForSqlOnVm": {
-                    "value": "Disabled"
                 },
                 "enableAscForArm": {
                     "value": "DeployIfNotExists"
                 },
                 "enableAscForDns": {
                     "value": "DeployIfNotExists"
-                },
-                "enableAscForOssDb": {
-                    "value": "Disabled"
                 }
             }
         },
