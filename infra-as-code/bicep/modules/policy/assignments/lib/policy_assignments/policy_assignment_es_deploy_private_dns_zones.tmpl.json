@@ -112,9 +112,6 @@
       "azureMonitorPrivateDnsZoneId5": {
         "value": "${varPrivateDnsZonesFinalResourceIds}.azureMonitorPrivateDnsZoneId5]"
       },
-      "azureWebPrivateDnsZoneId": {
-        "value": "${varPrivateDnsZonesFinalResourceIds}.azureWebPrivateDnsZoneId]"
-      },
       "azureBatchPrivateDnsZoneId": {
         "value": "${varPrivateDnsZonesFinalResourceIds}.azureBatchPrivateDnsZoneId]"
       },

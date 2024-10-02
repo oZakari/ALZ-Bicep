@@ -13,9 +13,6 @@
       "azureFilePrivateDnsZoneId": {
         "value": "${private_dns_zone_prefix}privatelink.afs.azure.net"
       },
-      "azureWebPrivateDnsZoneId": {
-        "value": "${private_dns_zone_prefix}privatelink.webpubsub.azure.com"
-      },
       "azureBatchPrivateDnsZoneId": {
         "value": "${private_dns_zone_prefix}privatelink.${parDefaultRegion}.batch.azure.com"
       },

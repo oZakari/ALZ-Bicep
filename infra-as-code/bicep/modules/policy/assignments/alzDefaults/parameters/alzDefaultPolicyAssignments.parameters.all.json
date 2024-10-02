@@ -44,12 +44,6 @@
     "parLogAnalyticsWorkspaceLogRetentionInDays": {
       "value": "365"
     },
-    "parDataCollectionRuleVMInsightsResourceId": {
-      "value": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/alz-logging/providers/Microsoft.Insights/dataCollectionRules/alz-ama-vmi-dcr"
-    },
-    "parDataCollectionRuleChangeTrackingResourceId": {
-      "value": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/alz-logging/providers/Microsoft.Insights/dataCollectionRules/alz-ama-ct-dcr"
-    },
     "parDataCollectionRuleMDFCSQLResourceId": {
       "value": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/alz-logging/providers/Microsoft.Insights/dataCollectionRules/ama-mdfcsql-default-dcr"
     },
